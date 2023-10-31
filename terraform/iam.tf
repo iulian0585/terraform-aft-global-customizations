@@ -4,11 +4,11 @@ resource "aws_iam_role" "administrator_role" {
     Version = "2012-10-17"
     Statement = [
       {
-        Action = "sts:AssumeRole"
+        Sid    = "AllowWebIdentitySession"
+        Action = [ "sts:AssumeRole", "sts:AssumeRoleWithWebIdentity" ] 
         Effect = "Allow"
-        Sid    = ""
         Principal = {
-          "AWS" : "arn:aws:iam::635937700821:root"
+          "AWS" : "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iulian"
         }
       },
     ]
