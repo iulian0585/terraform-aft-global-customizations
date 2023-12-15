@@ -5,10 +5,13 @@ resource "aws_iam_role" "administrator_role" {
     Statement = [
       {
         Sid    = "AllowWebIdentitySession"
-        Action = [ "sts:AssumeRole", "sts:AssumeRoleWithWebIdentity" ] 
+        Action = [ "sts:AssumeRole", "sts:AssumeRoleWithWebIdentity" ]
         Effect = "Allow"
         Principal = {
-          "AWS" : "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iulian"
+          "AWS": [
+            "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iulian",
+					  "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iustin"
+          ]
         }
       },
     ]
