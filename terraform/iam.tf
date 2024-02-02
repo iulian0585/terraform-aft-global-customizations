@@ -9,8 +9,8 @@ resource "aws_iam_role" "administrator_role" {
         Effect = "Allow"
         Principal = {
           "AWS": [
-            "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iulian",
-					  "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/iustin"
+            "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/Iulian",
+					  "arn:aws:sts::635937700821:assumed-role/AWSReservedSSO_AWSAdministratorAccess_1e59c9c2b9958f62/Iustin"
           ]
         }
       },
